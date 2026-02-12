@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QueerBookHub</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/hero-section.css">
+    <link rel="stylesheet" href="./assets/css/sekcje.css">
+    <link rel="stylesheet" href="./assets/css/search.css">
+    <link rel="stylesheet" href="./assets/css/prloader.css">
+    <link rel="stylesheet" href="./assets/css/header&menu.css">
+    <link rel="stylesheet" href="./assets/css/sekcja-zrodla.css">
+    <link rel="stylesheet" href="./assets/css/sekcja-nowosci.css">
+    <link rel="stylesheet" href="./assets/css/books_shop.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+
+    <style>
+      .hero {
+    background-image: url(./assets/img/concat.png);
+}
+
+        .kontakt {
+            padding: 80px 20px;
+            background: #f8f6f2;
+            display: flex;
+            justify-content: center;
+        }
+
+        .kontakt-content {
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .kontakt-content h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .kontakt-content p {
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .kontakt-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .form-group label {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+            transition: 0.2s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2e7d32;
+            box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.2);
+        }
+
+        .kontakt-form button {
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background-color: #2e7d32;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .kontakt-form button:hover {
+            background-color: #27642a;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Preloader -->
+<div class="preloader">
+  <div class="loader"></div>
+</div>
+
+<!-- Header -->
+<header id="header">
+  <div class="container">
+    <nav>
+      <a href="index.html" class="logo">QueerBook<span style="color:#6b5b3e">Hub</span></a>
+
+      <!-- Główne linki -->
+      <ul class="nav-links">
+        <li><a href="index.html">Nowości</a></li>
+
+        <!-- Dropdown Kategorie -->
+        <li class="dropdown">
+          <a href="#">Kategorie ▾</a>
+          <ul class="dropdown-menu">
+            <!-- Podmenu Książki -->
+            <li class="submenu">
+              <a href="#">Książki ▸</a>
+              <ul class="submenu-menu">
+                <li><a href="mlm_book.html">Men Love Men</a></li>
+                <li><a href="wlw_komiks.html">Women Love Women</a></li>
+                <li><a href="nonbinary_book.html">Nonbinary</a></li>
+              </ul>
+            </li>
+
+            <!-- Podmenu Komiksy/Manga -->
+            <li class="submenu">
+              <a href="#komiksy">Komiksy ▸</a>
+              <ul class="submenu-menu">
+                <li><a href="mlm_komiks.html">Men Love Men</a></li>
+                <li><a href="#wlw_komiks.html">Women Love Women</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="recenzje.html">Recenzje</a></li>
+        <li><a href="concact.html">Kontakt</a></li>
+
+        <!-- Szukaj -->
+        <li>
+          <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Szukaj książek…">
+          </div>
+        </li>
+      </ul>
+
+      <!-- Burger na mobile -->
+      <div class="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+<!-- Kontakt section -->
+<section id="kontakt" class="kontakt">
+  <div class="kontakt-content">
+    <h3>Kontakt</h3>
+    <p>Masz propozycję książki LGBTQ+? Chcesz dodać recenzję lub współpracować? Napisz do mnie 💌</p>
+
+    <form class="kontakt-form" action="https://formsubmit.co/queerbookhub@op.pl" method="POST">
+  <div class="form-group">
+    <label for="name">Imię/nick</label>
+    <input type="text" id="name" name="name" required placeholder="Twoje imię/nick">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required placeholder="Twój adres email">
+  </div>
+
+  <div class="form-group">
+    <label for="message">Wiadomość</label>
+    <textarea id="message" name="message" rows="5" required placeholder="Napisz swoją wiadomość..."></textarea>
+  </div>
+
+  <!-- Nowe checkboksy -->
+  <div class="form-group">
+    <p>Wiadomość dotyczy:</p>
+    <label><input type="checkbox" name="temat[]" value="Książki MLM"> Książki MLM</label>
+    <label><input type="checkbox" name="temat[]" value="Książki WLW"> Książki WLW</label>
+    <label><input type="checkbox" name="temat[]" value="Książki Nonbinary"> Książki Nonbinary</label>
+    <label><input type="checkbox" name="temat[]" value="Komiksy MLM"> Komiksy MLM</label>
+    <label><input type="checkbox" name="temat[]" value="Komiksy WLW"> Komiksy WLW</label>
+    <label><input type="checkbox" name="temat[]" value="Recenzja strony"> Recenzja strony</label>
+    <label><input type="checkbox" name="temat[]" value="Recenzja ksiazki"> Recenzja książki</label>
+    <label><input type="checkbox" name="temat[]" value="Recenzja inne"> Inne</label>
+  </div>
+
+  <!-- Opcjonalnie: strona podziękowania -->
+  <input type="hidden" name="_next" value="https://twojastrona.pl/dziekuje.html">
+  <input type="hidden" name="_captcha" value="false">
+
+  <button type="submit">Wyślij wiadomość</button>
+</form>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 QueerBookHub. Wszelkie prawa zastrzeżone.</p>
+    <p>
+      <a href="concact.html">Kontakt</a>
+    </p>
+  </div>
+</footer>
+
+<!-- JS -->
+<script src="./assets/js/script_preloader.js"></script>
+<script src="./assets/js/script_menu.js"></script>
+<script src="./assets/js/script_wyszukiwarka.js"></script>
+</body>
+</html>

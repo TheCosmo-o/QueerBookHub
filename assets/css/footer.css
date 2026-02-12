@@ -1,0 +1,19 @@
+/* Stopka */
+.footer {
+  background-color: #eb988f; ;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #cfdc39;
+}

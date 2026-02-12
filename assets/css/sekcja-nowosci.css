@@ -1,0 +1,41 @@
+/* --- SEKCJA ŹRÓDŁA --- */
+.nowosci {
+    padding: 100px 0;
+    background-color: var(--beige-light);
+    color: var(--text-dark);
+
+    display: flex;
+    justify-content: center; /* poziomo */
+    align-items: center;     /* PIONOWO */
+}
+
+.nowosci-content {
+    max-width: 1200px;
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* WSZYSTKO na środek */
+    justify-content: center; /* na wszelki wypadek */
+    text-align: center;
+}
+
+.nowosci-content h3 {
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+    font-size: 200%;
+}
+
+/* KONTENER NA OBRAZY */
+.nowosci-images {
+    display: flex;
+    justify-content: center; /* obrazy na środku */
+    align-items: center;
+    gap: 30px;
+}
+
+/* SAME OBRAZY */
+.nowosci-images img {
+    height: 80px;
+    display: block; /* usuwa dziwne marginesy inline */
+}

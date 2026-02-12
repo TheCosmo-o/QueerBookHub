@@ -1,0 +1,324 @@
+/* --- HEADER --- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background: linear-gradient(to right, var(--beige-dark), var(--beige));
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: var(--transition);
+    display: flex;            /* Flex dla centr. zawartości */
+    align-items: center;      /* Wyśrodkowanie w pionie */
+    padding: 0 20px;          /* Padding poziomy */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;      /* Wyśrodkowanie w pionie */
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+}
+
+/* --- LOGO --- */
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--beige-light);
+    text-decoration: none;
+    display: flex;
+    align-items: center;      /* logo w pionie */
+    gap: 10px;
+}
+
+/* --- NAV LINKS --- */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;      /* linki wyśrodkowane w pionie */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--beige-light);
+    font-weight: bold;
+    position: relative;
+    padding: 8px 0;           /* trochę większy padding, żeby nie przyklejać */
+    line-height: 1;            /* usuń nadmiarowe line-height */
+}
+
+.nav-links a:hover {
+    color: var(--beige-brown);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--beige-accent);
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* --- BURGER --- */
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--beige-light);
+    border-radius: 2px;
+}
+
+
+header.scrolled {
+    padding: 5px 0;
+    background-color: rgba(245, 241, 232, 0.95);
+    backdrop-filter: blur(10px);
+}
+/* --- DROPDOWN --- */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--beige-dark);
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    min-width: 180px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    z-index: 50;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--beige);
+    color: var(--beige-brown);
+}
+
+@media screen and (min-width: 769px) {
+    .dropdown:hover .dropdown-menu {
+        display: flex;
+    }
+}
+
+/* --- BURGER --- */
+.burger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+    z-index: 3000;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--beige-light);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.burger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* --- MOBILE MENU --- */
+@media (max-width: 1000px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 220px;
+        background: linear-gradient(to bottom, var(--beige-dark), var(--beige));
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5rem 1.5rem;
+        gap: 2rem;
+        transition: right 0.3s ease;
+        z-index: 2000;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        padding-left: 1rem;
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: flex;
+    }
+}
+
+/* Podstawowe style menu */
+.dropdown, .dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown > li {
+    position: relative;
+}
+
+.dropdown a {
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    color: #ffffff;
+}
+
+
+
+/* Podmenu (drugi poziom) */
+.submenu {
+    position: relative;
+}
+
+.submenu-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; /* obok rodzica */
+    min-width: 180px;
+}
+
+.submenu:hover > .submenu-menu {
+    display: block;
+}
+
+/* Estetyka podmenu */
+.submenu-menu a {
+    background: var(--beige-dark);
+}
+
+.submenu-menu a:hover {
+    background: #ddd;
+}
+
+/* --- MOBILE MENU --- */
+@media (max-width: 1000px) {
+
+    /* Główne menu mobilne */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 220px;
+        background: linear-gradient(to bottom, var(--beige-dark), var(--beige));
+        flex-direction: column;
+        padding: 5rem 1.5rem;
+        gap: 1rem;
+        transition: right 0.3s ease;
+        z-index: 2000;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    /* Linki większe na mobile */
+    .nav-links a {
+        font-size: 1.2rem;
+        padding: 10px 0;
+        color: #fff;
+    }
+
+    /* Dropdown główny i podmenu */
+    .dropdown-menu,
+    .submenu-menu {
+        display: none;       /* domyślnie ukryte */
+        flex-direction: column;
+        padding-left: 0;
+        gap: 0.5rem;
+        
+    }
+
+    /* Po kliknięciu w kategorię */
+    .dropdown.active > .dropdown-menu,
+    .submenu.active > .submenu-menu {
+        display: flex;
+    }
+
+    /* Podmenu wcięte */
+    .submenu-menu {
+        padding-left: 1rem;
+        
+    }
+
+    /* Wyłącz absolute na mobile */
+    .dropdown-menu,
+    .submenu-menu {
+        position: static;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    .submenu-menu a {
+    background: transparent;
+}
+
+.submenu-menu a:hover {
+   background: transparent;
+}
+}
+
+/* Usuń/wyłącz hover dla dropdown */
+.dropdown:hover > .submenu,
+.dropdown:hover > .dropdown-menu {
+  display: none; /* lub po prostu usuń te reguły */
+}
+
+/* Zamiast hover, używaj klasy .active */
+.dropdown.active > .submenu,
+.dropdown.active > .dropdown-menu {
+  display: block;
+}

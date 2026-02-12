@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./assets/css/style.css">
+     <link rel="stylesheet" href="./assets/css/hero-section.css">
+     <link rel="stylesheet" href="./assets/css/sekcje.css">
+     <link rel="stylesheet" href="./assets/css/search.css">
+     <link rel="stylesheet" href="./assets/css/prloader.css">
+     <link rel="stylesheet" href="./assets/css/header&menu.css">
+     <link rel="stylesheet" href="./assets/css/sekcja-zrodla.css">
+     <link rel="stylesheet" href="./assets/css/sekcja-nowosci.css">
+      <link rel="stylesheet" href="./assets/css/books_shop.css">
+      <link rel="stylesheet" href="./assets/css/footer.css">
+      <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <title>QueerBookHub</title>
+</head>
+<STYLE>
+    .hero {
+    background-image: url(./assets/img/women-love-women.png);
+}
+
+.hero-content h1{
+    color:rgb(255, 255, 255);
+}
+
+.hero-content p{
+    color:rgb(255, 255, 255);
+}
+</STYLE>
+<body>
+
+<!-- Preloader -->
+<div class="preloader">
+  <div class="loader"></div>
+</div>
+
+
+<!-- Header -->
+<header id="header">
+  <div class="container">
+    <nav>
+      <a href="index.html" class="logo">QueerBook<span style="color:#6b5b3e">Hub</span></a>
+
+      <!-- Główne linki -->
+      <ul class="nav-links">
+        <li><a href="index.html">Nowości</a></li>
+
+        <!-- Dropdown Kategorie -->
+        <li class="dropdown">
+          <a href="#">Kategorie ▾</a>
+          <ul class="dropdown-menu">
+            <!-- Podmenu Książki -->
+            <li class="submenu">
+              <a href="#">Książki ▸</a>
+              <ul class="submenu-menu">
+                <li><a href="mlm_book.html">Men Love Men</a></li>
+                <li><a href="wlw_book.html">Women Love Women</a></li>
+                <li><a href="nonbinary_book.html">Nonbinary</a></li>
+              </ul>
+            </li>
+
+            <!-- Podmenu Komiksy/Manga -->
+            <li class="submenu">
+              <a href="#komiksy">Komiksy ▸</a>
+              <ul class="submenu-menu">
+                <li><a href="mlm_komiks.html">Men Love Men</a></li>
+                <li><a href="wlw_komiks.html">Women Love Women</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="recenzje.html">Recenzje</a></li>
+        <li><a href="concact.html">Kontakt</a></li>
+
+        <!-- Szukaj -->
+        <li>
+          <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Szukaj komiksów WLW ...">
+          </div>
+        </li>
+      </ul>
+
+      <!-- Burger na mobile -->
+      <div class="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+<!-- hero section -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Kategoria ta obejmuje komiksy Women Love Women</h1>
+     <p>Kategoria obejmuje komiksy z motywem Women Love Women (WLW) – historie o relacjach romantycznych między kobietami w formie graficznej.</p>
+    <a href="#wlw-top"><button>Zobacz polecajki</button></a>
+  </div>
+</section>
+
+
+<!-- nowości section -->
+ <div id="wlw-top">
+<section id="nowosci" class="nowosci">
+    <div class="nowosci-content">
+      <h3>Komiksy WLW</h3>
+      <div class="shop">
+        
+    <div class="book">
+        <div class="cover">
+            <img src="./assets/img/książki/wlw_book/Moje rozstania z Laurą Dean.png">
+        </div>
+        <div class="book-info">
+            <h3>Moje rozstania z Laurą Dean</h3>
+            <div class="author">Tamaki Mariko, Rosemary Valero-O'Connell</div>
+        </div>
+    </div>
+
+    <div class="book">
+        <div class="cover">
+            <img src="./assets/img/książki/wlw_book/Domestic Fluff.png">
+        </div>
+        <div class="book-info">
+            <h3>Domestic Fluff</h3>
+            <div class="author">Krztoń Anna, Łodyga Weronika</div>
+        </div>
+    </div>
+
+    <div class="book">
+        <div class="cover">
+            <img src="./assets/img/książki/wlw_book/Dziewczyna z głębi oceanu.png">
+        </div>
+        <div class="book-info">
+            <h3>Dziewczyna z głębi oceanu</h3>
+            <div class="author">Molly Knox Ostertag</div>
+        </div>
+    </div>
+    </div>
+</section>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 QueerBookHub. Wszelkie prawa zastrzeżone.</p>
+    <p>
+      <a href="concact.html">Kontakt</a>
+    </p>
+  </div>
+</footer>
+
+<script src="./assets/js/script_preloader.js"></script>
+<script src="./assets/js/script_menu.js"></script>
+<script src="./assets/js/script_wyszukiwarka.js"></script>
+</body>
+</html>

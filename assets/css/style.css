@@ -1,0 +1,45 @@
+:root {
+    --header-height: 90px;
+
+    /* PALETA INSPIROWANA GRAFIKĄ */
+    --beige-dark: #eb988f;    /* czerwony */
+    --beige: #DA7471;         /* koralowy / róż */
+    --beige-light: #f5f1e8;  /* jasne beżowo-różowe tło */
+    --beige-accent: #F4B029;  /* żółty */
+    --beige-brown: #69A796;   /* zielono-turkusowy */
+    --text-dark: #2F2A26;     /* ciemny tekst */
+    --text-white: #ffffff;  
+
+    --transition: 0.3s ease;
+}
+
+
+/* --- PODSTAWY --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+body {
+    padding-top: var(--header-height);
+    background-color: var(--beige-light);
+    color: var(--text-dark);
+}
+
+
+
+/* --- UKŁAD --- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+

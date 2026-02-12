@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./assets/css/style.css">
+     <link rel="stylesheet" href="./assets/css/hero-section.css">
+     <link rel="stylesheet" href="./assets/css/sekcje.css">
+     <link rel="stylesheet" href="./assets/css/search.css">
+     <link rel="stylesheet" href="./assets/css/prloader.css">
+     <link rel="stylesheet" href="./assets/css/header&menu.css">
+     <link rel="stylesheet" href="./assets/css/sekcja-zrodla.css">
+     <link rel="stylesheet" href="./assets/css/sekcja-nowosci.css">
+    <link rel="stylesheet" href="./assets/css/books_shop.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <title>QueerBookHub</title>
+</head>
+<style>
+.o-mnie {
+    padding: 80px 20px;
+    background-color: #fdfaf6;
+    text-align: center;
+}
+
+.o-mnie h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #2e7d32;
+}
+
+.o-mnie-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.o-mnie-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #2e7d32;
+}
+
+.o-mnie-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+.o-mnie-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.o-mnie-icons span {
+    font-size: 24px;
+    margin-right: 10px;
+}
+</style>
+<body>
+
+<!-- Preloader -->
+<div class="preloader">
+  <div class="loader"></div>
+</div>
+
+
+<!-- Header -->
+<header id="header">
+  <div class="container">
+    <nav>
+      <a href="index.html" class="logo">QueerBook<span style="color:#6b5b3e">Hub</span></a>
+
+      <!-- Główne linki -->
+      <ul class="nav-links">
+        <li><a href="#nowosci">Nowości</a></li>
+
+        <!-- Dropdown Kategorie -->
+        <li class="dropdown">
+          <a href="#">Kategorie ▾</a>
+          <ul class="dropdown-menu">
+            <!-- Podmenu Książki -->
+            <li class="submenu">
+              <a href="#">Książki ▸</a>
+              <ul class="submenu-menu">
+                <li><a href="mlm_book.html">Men Love Men</a></li>
+                <li><a href="wlw_book.html">Women Love Women</a></li>
+                <li><a href="nonbinary_book.html">Nonbinary</a></li>
+              </ul>
+            </li>
+
+            <!-- Podmenu Komiksy/Manga -->
+            <li class="submenu">
+              <a href="#komiksy">Komiksy ▸</a>
+              <ul class="submenu-menu">
+                <li><a href="mlm_komiks.html">Men Love Men</a></li>
+                <li><a href="wlw_komiks.html">Women Love Women</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="recenzje.html">Recenzje</a></li>
+        <li><a href="#about">O mnie</a></li>
+        <li><a href="concact.html">Kontakt</a></li>
+
+        <!-- Szukaj -->
+        <li>
+          <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Szukaj książek w nowościach...">
+          </div>
+        </li>
+      </ul>
+
+      <!-- Burger na mobile -->
+      <div class="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+<!-- hero section -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Strona zaprojektowana z myślą o prostszym wyszukiwaniu książek queerowych</h1>
+    <p>
+      Platforma umożliwia szybkie i intuicyjne odnajdywanie książek
+      o tematyce queerowej oraz odkrywanie nowych autorów i historii.
+    </p>
+  </div>
+</section>
+
+<!-- źródła section -->
+<section id="zrodla" class="zrodla">
+    <div class="zrodla-content">
+      <h3>Książki z tej strony dostępne są na poniższych platformach</h3>
+      <div class="zrodla-images">
+      <img src="./assets/img/loga/empik.png">
+      <img src="./assets/img/loga/lubimyczytać.png">
+      </div>
+    </div>
+</section>
+
+<!-- romans mlm section -->
+<section id="nowosci" class="nowosci">
+    <div class="nowosci-content">
+      <h3>Nowości</h3>
+      <div class="shop">
+
+      <div class="book" data-title="Okrutny kochanek" data-author="Sophie Lark">
+            <div class="cover"><img src="./assets/img/książki/mlm_book/okrutny_kochanek_okladka.png"></div>
+            <div class="book-info"><h3>Okrutny kochanek</h3><div class="author">Sophie Lark</div></div>
+        </div>
+
+        <div class="book" data-title="White Shirt" data-author="Popiel Julia">
+            <div class="cover"><img src="./assets/img/książki/mlm_book/white_shirt_okładka.png"></div>
+            <div class="book-info"><h3>White Shirt</h3><div class="author">Popiel Julia</div></div>
+        </div>
+</div>
+    </div>
+</section>
+
+<!-- O mnie section -->
+<section id="about" class="o-mnie">
+  <div class="container">
+    <h2>O mnie</h2>
+    <div class="o-mnie-content">
+      <div class="o-mnie-image">
+        <img src="./assets/img/profilowe.png" alt="Zdjęcie profilowe">
+      </div>
+      <div class="o-mnie-text">
+       <p>Cześć! Jestem Cosmo, pasjonat literatury LGBTQ+ 🌈 i recenzent książek oraz komiksów.  
+        Na QueerBookHub dzielę się moimi opiniami, polecam ciekawe tytuły i tworzę miejsce przyjazne dla każdej osoby z społeczności queer.</p>
+        <p>Uwielbiam odkrywać nowe historie, wspierać niezależnych autorów i inspirować innych do czytania.  
+        Moim celem jest stworzenie przestrzeni, w której każdy znajdzie coś dla siebie.</p>
+        <div class="o-mnie-icons">
+          <span>📚</span>
+          <span>💬</span>
+          <span>🌈</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 QueerBookHub. Wszelkie prawa zastrzeżone.</p>
+    <p>
+      <a href="concact.html">Kontakt</a>
+    </p>
+  </div>
+</footer>
+
+<script src="./assets/js/script_preloader.js"></script>
+<script src="./assets/js/script_menu.js"></script>
+<script src="./assets/js/script_wyszukiwarka.js"></script>
+</body>
+</html>

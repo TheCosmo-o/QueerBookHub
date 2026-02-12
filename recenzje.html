@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./assets/css/style.css">
+     <link rel="stylesheet" href="./assets/css/hero-section.css">
+     <link rel="stylesheet" href="./assets/css/sekcje.css">
+     <link rel="stylesheet" href="./assets/css/search.css">
+     <link rel="stylesheet" href="./assets/css/prloader.css">
+     <link rel="stylesheet" href="./assets/css/header&menu.css">
+     <link rel="stylesheet" href="./assets/css/sekcja-zrodla.css">
+     <link rel="stylesheet" href="./assets/css/sekcja-nowosci.css">
+      <link rel="stylesheet" href="./assets/css/books_shop.css">
+      <link rel="stylesheet" href="./assets/css/footer.css">
+      <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <title>QueerBookHub</title>
+</head>
+<STYLE>
+    .hero {
+    background-image: url(./assets/img/recenzja.png);
+}
+
+.hero-content h1{
+    color:rgb(255, 255, 255);
+}
+
+.hero-content p{
+    color:rgb(255, 255, 255);
+}
+
+.reviews {
+    padding: 60px 20px;
+    background-color: #f0f0f5;
+}
+
+.reviews h3 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    color: #333;
+    font-weight: 700;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.review-card {
+    display: flex;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+
+.review-cover {
+    flex: 0 0 120px;
+    overflow: hidden;
+}
+
+.review-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.review-content {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-header h4 {
+    margin: 0 0 5px 0;
+    font-size: 1.3rem;
+    color: #222;
+}
+
+.review-header .author {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.review-header .rating {
+    color: #f39c12;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.review-text {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .review-card {
+        flex-direction: column;
+    }
+    .review-cover {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+</STYLE>
+<body>
+
+<!-- Preloader -->
+<div class="preloader">
+  <div class="loader"></div>
+</div>
+
+
+<!-- Header -->
+<header id="header">
+  <div class="container">
+    <nav>
+      <a href="index.html" class="logo">QueerBook<span style="color:#6b5b3e">Hub</span></a>
+
+      <!-- Główne linki -->
+      <ul class="nav-links">
+        <li><a href="index.html">Nowości</a></li>
+
+        <!-- Dropdown Kategorie -->
+        <li class="dropdown">
+          <a href="#">Kategorie ▾</a>
+          <ul class="dropdown-menu">
+            <!-- Podmenu Książki -->
+            <li class="submenu">
+              <a href="#">Książki ▸</a>
+              <ul class="submenu-menu">
+                <li><a href="mlm_book.html">Men Love Men</a></li>
+                <li><a href="wlw_book.html">Women Love Women</a></li>
+                <li><a href="nonbinary_book.html">Nonbinary</a></li>
+              </ul>
+            </li>
+
+            <!-- Podmenu Komiksy/Manga -->
+            <li class="submenu">
+              <a href="#komiksy">Komiksy ▸</a>
+              <ul class="submenu-menu">
+                <li><a href="mlm_komiks.html">Men Love Men</a></li>
+                <li><a href="wlw_komiks.html">Women Love Women</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="recenzje.html">Recenzje</a></li>
+        <li><a href="concact.html">Kontakt</a></li>
+
+        <!-- Szukaj -->
+        <li>
+          <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Szukaj książek w recenzjach…">
+          </div>
+        </li>
+      </ul>
+
+      <!-- Burger na mobile -->
+      <div class="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+<!-- hero section -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Kategoria ta obejmuje recenzje książek</h1>
+    <p>Opinie i rekomendacje książek różnych gatunków, które warto przeczytać.</p>
+    <a href="#recenzja"><button>Zobacz recenzje</button></a>
+  </div>
+</section>
+
+<div id="recenzja">
+<!-- Recenzje książek Nonbinary -->
+<section id="reviews" class="reviews">
+  <div class="container">
+    <h3>Recenzje książek</h3>
+    <div class="reviews-grid">
+
+      <!-- Recenzja 1 -->
+      <div class="review-card">
+        <div class="review-cover">
+          <img src="./assets/img/książki/mlm_book/Hurt Comfort Angst with happy ending_okładka.png">
+        </div>
+        <div class="review-content">
+          <div class="review-header">
+            <h4>Hurt Comfort / Angst with happy ending</h4>
+            <div class="author">Weronika Łodyga</div>
+            <div class="rating">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+            </div>
+          </div>
+          <p class="review-text">
+            Książka jest emocjonalna i poruszająca — często bohaterowie mierzą się z trudnymi sytuacjami, których nie unikają uczucia wstydu, lęku, niezrozumienia czy smutku. Dzięki temu historia może dotknąć czytelnika i sprawić, że zacznie myśleć o własnym życiu lub o świecie młodych ludzi wokół nas.
+          </p>
+        </div>
+      </div>
+
+         <!-- Recenzja 1 -->
+      <div class="review-card">
+        <div class="review-cover">
+          <img src="./assets/img/książki/mlm_book/skok_do_gwiazd_okladka.png">
+        </div>
+        <div class="review-content">
+          <div class="review-header">
+            <h4>Skok do gwiazd</h4>
+            <div class="author">Bartosz Brzeziński</div>
+            <div class="rating">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+          </div>
+          <p class="review-text">
+           Skok do gwiazd to współczesna powieść młodzieżowa skupiona wokół postaci Kamila Wilczka – młodego siatkarza, który próbuje uciec od bolesnej przeszłości, swoich lęków i zawiedzionych marzeń. Gdy traci radość z siatkówki i zaczyna nowe życie w innym miejscu, odkrywa, że ucieczka nie rozwiązuje problemów – musi zmierzyć się z własnymi emocjami, traumami i próbą odnalezienia sensu w tym, co robi.
+          </p>
+        </div>
+      </div>
+
+               <!-- Recenzja 1 -->
+      <div class="review-card">
+        <div class="review-cover">
+          <img src="./assets/img/książki/mlm_book/Heartbreak Boys.png">
+        </div>
+        <div class="review-content">
+          <div class="review-header">
+            <h4>Heartbreak Boys</h4>
+            <div class="author">Green Simon James</div>
+            <div class="rating">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+            </div>
+          </div>
+          <p class="review-text">
+           Książka nie boi się mówić o złamanym sercu, samoakceptacji i przyjaźni, która może przerodzić się w coś więcej. To historia o tym, że zanim pokażemy światu jak dobrze sobie radzimy, warto nauczyć się tego wewnętrznie — i że czasem to właśnie druga osoba obok nas pomaga to zrozumieć.
+          </p>
+        </div>
+      </div>
+
+               <!-- Recenzja 1 -->
+      <div class="review-card">
+        <div class="review-cover">
+          <img src="./assets/img/książki/mlm_book/Truskawkowy blond.png">
+        </div>
+        <div class="review-content">
+          <div class="review-header">
+            <h4>Truskawkowy blond</h4>
+            <div class="author">Prusinowska Edyta</div>
+            <div class="rating">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+          </div>
+          <p class="review-text">
+           Truskawkowy blond to lekka i romantyczna powieść młodzieżowa o miłości i wyzwaniach życia w cieniu sławy, z pozytywnym wątkiem LGBTQ+.
+          </p>
+        </div>
+      </div>
+
+        
+
+
+    </div>
+  </div>
+</section>
+</div>
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 QueerBookHub. Wszelkie prawa zastrzeżone.</p>
+    <p>
+      <a href="concact.html">Kontakt</a>
+    </p>
+  </div>
+
+
+<script src="./assets/js/script_preloader.js"></script>
+<script src="./assets/js/script_menu.js"></script>
+<script src="./assets/js/script_wyszukiwarka.js"></script>
+</body>
+</html>

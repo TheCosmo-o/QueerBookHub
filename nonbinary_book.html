@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="./assets/css/style.css">
+     <link rel="stylesheet" href="./assets/css/hero-section.css">
+     <link rel="stylesheet" href="./assets/css/sekcje.css">
+     <link rel="stylesheet" href="./assets/css/search.css">
+     <link rel="stylesheet" href="./assets/css/prloader.css">
+     <link rel="stylesheet" href="./assets/css/header&menu.css">
+     <link rel="stylesheet" href="./assets/css/sekcja-zrodla.css">
+     <link rel="stylesheet" href="./assets/css/sekcja-nowosci.css">
+      <link rel="stylesheet" href="./assets/css/books_shop.css">
+      <link rel="stylesheet" href="./assets/css/footer.css">
+      <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <title>QueerBookHub</title>
+</head>
+<STYLE>
+    .hero {
+    background-image: url(./assets/img/nonbinary.png);
+}
+
+.hero-content h1{
+    color:black;
+}
+
+.hero-content p{
+    color:black;
+}
+
+
+</STYLE>
+<body>
+
+<!-- Preloader -->
+<div class="preloader">
+  <div class="loader"></div>
+</div>
+
+
+<!-- Header -->
+<header id="header">
+  <div class="container">
+    <nav>
+      <a href="index.html" class="logo">QueerBook<span style="color:#6b5b3e">Hub</span></a>
+
+      <!-- Główne linki -->
+      <ul class="nav-links">
+        <li><a href="index.html">Nowości</a></li>
+
+        <!-- Dropdown Kategorie -->
+        <li class="dropdown">
+          <a href="#">Kategorie ▾</a>
+          <ul class="dropdown-menu">
+            <!-- Podmenu Książki -->
+            <li class="submenu">
+              <a href="#">Książki ▸</a>
+              <ul class="submenu-menu">
+                <li><a href="mlm_book.html">Men Love Men</a></li>
+                <li><a href="wlw_book.html">Women Love Women</a></li>
+                <li><a href="nonbinary_book.html">Nonbinary</a></li>
+              </ul>
+            </li>
+
+            <!-- Podmenu Komiksy/Manga -->
+            <li class="submenu">
+              <a href="#komiksy">Komiksy ▸</a>
+              <ul class="submenu-menu">
+                <li><a href="mlm_komiks.html">Men Love Men</a></li>
+                <li><a href="wlw_komiks.html">Women Love Women</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li><a href="recenzje.html">Recenzje</a></li>
+        <li><a href="concact.html">Kontakt</a></li>
+
+        <!-- Szukaj -->
+        <li>
+          <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Szukaj książek NOMBINARY…">
+          </div>
+        </li>
+      </ul>
+
+      <!-- Burger na mobile -->
+      <div class="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+<!-- hero section -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Kategoria ta obejmuje książki NONBINARY</h1>
+    <p>Książki o osobach niebinarnych, ich relacjach i codziennym życiu.</p>
+    <a href="#nonbinary-top"><button>Zobacz polecajki</button></a>
+  </div>
+</section>
+
+<!-- romans wlw section -->
+<div id="nonbinary-top">
+<section id="nowosci" class="nowosci">
+    <div class="nowosci-content">
+      <h3>Książki Nonbinary</h3>
+      <div class="shop">
+
+    <div class="book">
+        <div class="cover">
+            <img src="./assets/img/książki/nonbinary/Sam Sylvester i wiele na wpół przeżytych żyć.png">
+        </div>
+        <div class="book-info">
+            <h3>Sam Sylvester i wiele na wpół przeżytych żyć</h3>
+            <div class="author">Maya MacGregor</div>
+        </div>
+    </div>
+
+    <div class="book" data-title="Wszystkiego, co najlepsze" data-author="Mason Deaver">
+            <div class="cover"><img src="./assets/img/książki/mlm_book/Wszystkiego, co najlepsze.png"></div>
+            <div class="book-info"><h3>Wszystkiego, co najlepsze</h3><div class="author">Mason Deaver</div></div>
+        </div>
+    <div class="book">
+        <div class="cover">
+            <img src="./assets/img/książki/nonbinary/Nigdy nie będziesz szło samo.png">
+        </div>
+        <div class="book-info">
+            <h3>Nigdy nie będziesz szło samo</h3>
+            <div class="author">Anouk Herman</div>
+        </div>
+    </div>
+    </div>
+</section>
+</div>
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 QueerBookHub. Wszelkie prawa zastrzeżone.</p>
+    <p>
+      <a href="concact.html">Kontakt</a>
+    </p>
+  </div>
+</footer>
+<script src="./assets/js/script_preloader.js"></script>
+<script src="./assets/js/script_menu.js"></script>
+<script src="./assets/js/script_wyszukiwarka.js"></script>
+</body>
+</html>

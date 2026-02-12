@@ -1,0 +1,51 @@
+/* --- SEKCJA ŹRÓDŁA --- */
+.zrodla {
+    padding: 100px 0;
+    background-color: var(--beige-light);
+    color: var(--text-dark);
+    display: flex;
+    justify-content: center; /* poziome wyśrodkowanie */
+}
+
+.zrodla-content {
+    max-width: 1200px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* wyśrodkowanie w pionie */
+    text-align: center;
+}
+
+.zrodla-content h3 {
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+    font-size: 150%;
+}
+
+/* OBRAZY OBOK SIEBIE */
+.zrodla-images {
+    display: flex;
+    justify-content: center; /* wyśrodkowanie poziome */
+    align-items: center;     /* wyrównanie w pionie */
+    gap: 30px;
+    flex-wrap: wrap;         /* dodajemy wrap dla mobile */
+}
+
+.zrodla-content img {
+    height: 80px;            /* wysokość obrazów */
+    margin: 0 15px;
+    display: block;
+}
+
+/* --- MOBILNY ODPOSOWANE --- */
+@media (max-width: 768px) {
+    .zrodla-content img {
+        height: 60px;        /* mniejsze obrazki na mobile */
+        margin: 10px 5px;    /* większy odstęp pionowy, mniejszy poziomy */
+    }
+
+    .zrodla-images {
+        gap: 15px;           /* zmniejszony odstęp między obrazami */
+        justify-content: center;
+    }
+}
